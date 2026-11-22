@@ -1,5 +1,5 @@
 // 서비스워커: 앱 파일은 저장본 우선(빠름·오프라인), content.js은 네트워크 우선(최신 반영)
-const V = 'manual-v14';
+const V = 'manual-v15';
 const SHELL = ['./', 'index.html', 'app.js', 'style.css', 'manifest.json', 'content.js', 'icon-192.png', 'img/geonhyeonmang-model.jpg', 'img/hero-banner.jpg', 'img/card-enforce.jpg', 'img/card-admin.jpg'];
 
 self.addEventListener('install', (e) => {
