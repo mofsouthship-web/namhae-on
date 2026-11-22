@@ -1365,7 +1365,7 @@ window.CONTENT = {
    "ref": "제48조 본문 관련",
    "pages": [
     {
-     "src": "img/law/sirae-rule-별표11-p45.jpg",
+     "src": "img/law/sirae-rule-bp11-p45.jpg",
      "page": 45
     }
    ],
@@ -1386,7 +1386,7 @@ window.CONTENT = {
    "ref": "제83조제2항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-rule-별표15-p50.jpg",
+     "src": "img/law/sirae-rule-bp15-p50.jpg",
      "page": 50
     }
    ],
@@ -1407,11 +1407,11 @@ window.CONTENT = {
    "ref": "제41조제1항 본문 관련",
    "pages": [
     {
-     "src": "img/law/sirae-rule-별표7-p36.jpg",
+     "src": "img/law/sirae-rule-bp7-p36.jpg",
      "page": 36
     },
     {
-     "src": "img/law/sirae-rule-별표7-p37.jpg",
+     "src": "img/law/sirae-rule-bp7-p37.jpg",
      "page": 37
     }
    ],
@@ -1447,7 +1447,7 @@ window.CONTENT = {
    "ref": "제14조제2항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표1-p23.jpg",
+     "src": "img/law/sirae-decree-bp1-p23.jpg",
      "page": 23
     }
    ],
@@ -1462,179 +1462,179 @@ window.CONTENT = {
    "ref": "제21조제2항, 제22조제2항, 제23조제2항 및 제38조제1항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표2-p24.jpg",
+     "src": "img/law/sirae-decree-bp2-p24.jpg",
      "page": 24
     },
     {
-     "src": "img/law/sirae-decree-별표2-p25.jpg",
+     "src": "img/law/sirae-decree-bp2-p25.jpg",
      "page": 25
     },
     {
-     "src": "img/law/sirae-decree-별표2-p26.jpg",
+     "src": "img/law/sirae-decree-bp2-p26.jpg",
      "page": 26
     },
     {
-     "src": "img/law/sirae-decree-별표2-p27.jpg",
+     "src": "img/law/sirae-decree-bp2-p27.jpg",
      "page": 27
     },
     {
-     "src": "img/law/sirae-decree-별표2-p28.jpg",
+     "src": "img/law/sirae-decree-bp2-p28.jpg",
      "page": 28
     },
     {
-     "src": "img/law/sirae-decree-별표2-p29.jpg",
+     "src": "img/law/sirae-decree-bp2-p29.jpg",
      "page": 29
     },
     {
-     "src": "img/law/sirae-decree-별표2-p30.jpg",
+     "src": "img/law/sirae-decree-bp2-p30.jpg",
      "page": 30
     },
     {
-     "src": "img/law/sirae-decree-별표2-p31.jpg",
+     "src": "img/law/sirae-decree-bp2-p31.jpg",
      "page": 31
     },
     {
-     "src": "img/law/sirae-decree-별표2-p32.jpg",
+     "src": "img/law/sirae-decree-bp2-p32.jpg",
      "page": 32
     },
     {
-     "src": "img/law/sirae-decree-별표2-p33.jpg",
+     "src": "img/law/sirae-decree-bp2-p33.jpg",
      "page": 33
     },
     {
-     "src": "img/law/sirae-decree-별표2-p34.jpg",
+     "src": "img/law/sirae-decree-bp2-p34.jpg",
      "page": 34
     },
     {
-     "src": "img/law/sirae-decree-별표2-p35.jpg",
+     "src": "img/law/sirae-decree-bp2-p35.jpg",
      "page": 35
     },
     {
-     "src": "img/law/sirae-decree-별표2-p36.jpg",
+     "src": "img/law/sirae-decree-bp2-p36.jpg",
      "page": 36
     },
     {
-     "src": "img/law/sirae-decree-별표2-p37.jpg",
+     "src": "img/law/sirae-decree-bp2-p37.jpg",
      "page": 37
     },
     {
-     "src": "img/law/sirae-decree-별표2-p38.jpg",
+     "src": "img/law/sirae-decree-bp2-p38.jpg",
      "page": 38
     },
     {
-     "src": "img/law/sirae-decree-별표2-p39.jpg",
+     "src": "img/law/sirae-decree-bp2-p39.jpg",
      "page": 39
     },
     {
-     "src": "img/law/sirae-decree-별표2-p40.jpg",
+     "src": "img/law/sirae-decree-bp2-p40.jpg",
      "page": 40
     },
     {
-     "src": "img/law/sirae-decree-별표2-p41.jpg",
+     "src": "img/law/sirae-decree-bp2-p41.jpg",
      "page": 41
     },
     {
-     "src": "img/law/sirae-decree-별표2-p42.jpg",
+     "src": "img/law/sirae-decree-bp2-p42.jpg",
      "page": 42
     },
     {
-     "src": "img/law/sirae-decree-별표2-p43.jpg",
+     "src": "img/law/sirae-decree-bp2-p43.jpg",
      "page": 43
     },
     {
-     "src": "img/law/sirae-decree-별표2-p44.jpg",
+     "src": "img/law/sirae-decree-bp2-p44.jpg",
      "page": 44
     },
     {
-     "src": "img/law/sirae-decree-별표2-p45.jpg",
+     "src": "img/law/sirae-decree-bp2-p45.jpg",
      "page": 45
     },
     {
-     "src": "img/law/sirae-decree-별표2-p46.jpg",
+     "src": "img/law/sirae-decree-bp2-p46.jpg",
      "page": 46
     },
     {
-     "src": "img/law/sirae-decree-별표2-p47.jpg",
+     "src": "img/law/sirae-decree-bp2-p47.jpg",
      "page": 47
     },
     {
-     "src": "img/law/sirae-decree-별표2-p48.jpg",
+     "src": "img/law/sirae-decree-bp2-p48.jpg",
      "page": 48
     },
     {
-     "src": "img/law/sirae-decree-별표2-p49.jpg",
+     "src": "img/law/sirae-decree-bp2-p49.jpg",
      "page": 49
     },
     {
-     "src": "img/law/sirae-decree-별표2-p50.jpg",
+     "src": "img/law/sirae-decree-bp2-p50.jpg",
      "page": 50
     },
     {
-     "src": "img/law/sirae-decree-별표2-p51.jpg",
+     "src": "img/law/sirae-decree-bp2-p51.jpg",
      "page": 51
     },
     {
-     "src": "img/law/sirae-decree-별표2-p52.jpg",
+     "src": "img/law/sirae-decree-bp2-p52.jpg",
      "page": 52
     },
     {
-     "src": "img/law/sirae-decree-별표2-p53.jpg",
+     "src": "img/law/sirae-decree-bp2-p53.jpg",
      "page": 53
     },
     {
-     "src": "img/law/sirae-decree-별표2-p54.jpg",
+     "src": "img/law/sirae-decree-bp2-p54.jpg",
      "page": 54
     },
     {
-     "src": "img/law/sirae-decree-별표2-p55.jpg",
+     "src": "img/law/sirae-decree-bp2-p55.jpg",
      "page": 55
     },
     {
-     "src": "img/law/sirae-decree-별표2-p56.jpg",
+     "src": "img/law/sirae-decree-bp2-p56.jpg",
      "page": 56
     },
     {
-     "src": "img/law/sirae-decree-별표2-p57.jpg",
+     "src": "img/law/sirae-decree-bp2-p57.jpg",
      "page": 57
     },
     {
-     "src": "img/law/sirae-decree-별표2-p58.jpg",
+     "src": "img/law/sirae-decree-bp2-p58.jpg",
      "page": 58
     },
     {
-     "src": "img/law/sirae-decree-별표2-p59.jpg",
+     "src": "img/law/sirae-decree-bp2-p59.jpg",
      "page": 59
     },
     {
-     "src": "img/law/sirae-decree-별표2-p60.jpg",
+     "src": "img/law/sirae-decree-bp2-p60.jpg",
      "page": 60
     },
     {
-     "src": "img/law/sirae-decree-별표2-p61.jpg",
+     "src": "img/law/sirae-decree-bp2-p61.jpg",
      "page": 61
     },
     {
-     "src": "img/law/sirae-decree-별표2-p62.jpg",
+     "src": "img/law/sirae-decree-bp2-p62.jpg",
      "page": 62
     },
     {
-     "src": "img/law/sirae-decree-별표2-p63.jpg",
+     "src": "img/law/sirae-decree-bp2-p63.jpg",
      "page": 63
     },
     {
-     "src": "img/law/sirae-decree-별표2-p64.jpg",
+     "src": "img/law/sirae-decree-bp2-p64.jpg",
      "page": 64
     },
     {
-     "src": "img/law/sirae-decree-별표2-p65.jpg",
+     "src": "img/law/sirae-decree-bp2-p65.jpg",
      "page": 65
     },
     {
-     "src": "img/law/sirae-decree-별표2-p66.jpg",
+     "src": "img/law/sirae-decree-bp2-p66.jpg",
      "page": 66
     },
     {
-     "src": "img/law/sirae-decree-별표2-p67.jpg",
+     "src": "img/law/sirae-decree-bp2-p67.jpg",
      "page": 67
     }
    ],
@@ -1720,7 +1720,7 @@ window.CONTENT = {
    "ref": "제24조제1항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표3-p110.jpg",
+     "src": "img/law/sirae-decree-bp3-p110.jpg",
      "page": 110
     }
    ],
@@ -1738,11 +1738,11 @@ window.CONTENT = {
    "ref": "제31조제1항 본문 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표5-p113.jpg",
+     "src": "img/law/sirae-decree-bp5-p113.jpg",
      "page": 113
     },
     {
-     "src": "img/law/sirae-decree-별표5-p114.jpg",
+     "src": "img/law/sirae-decree-bp5-p114.jpg",
      "page": 114
     }
    ],
@@ -1767,51 +1767,51 @@ window.CONTENT = {
    "ref": "제38조제2항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표7-p119.jpg",
+     "src": "img/law/sirae-decree-bp7-p119.jpg",
      "page": 119
     },
     {
-     "src": "img/law/sirae-decree-별표7-p120.jpg",
+     "src": "img/law/sirae-decree-bp7-p120.jpg",
      "page": 120
     },
     {
-     "src": "img/law/sirae-decree-별표7-p121.jpg",
+     "src": "img/law/sirae-decree-bp7-p121.jpg",
      "page": 121
     },
     {
-     "src": "img/law/sirae-decree-별표7-p122.jpg",
+     "src": "img/law/sirae-decree-bp7-p122.jpg",
      "page": 122
     },
     {
-     "src": "img/law/sirae-decree-별표7-p123.jpg",
+     "src": "img/law/sirae-decree-bp7-p123.jpg",
      "page": 123
     },
     {
-     "src": "img/law/sirae-decree-별표7-p128.jpg",
+     "src": "img/law/sirae-decree-bp7-p128.jpg",
      "page": 128
     },
     {
-     "src": "img/law/sirae-decree-별표7-p129.jpg",
+     "src": "img/law/sirae-decree-bp7-p129.jpg",
      "page": 129
     },
     {
-     "src": "img/law/sirae-decree-별표7-p131.jpg",
+     "src": "img/law/sirae-decree-bp7-p131.jpg",
      "page": 131
     },
     {
-     "src": "img/law/sirae-decree-별표7-p133.jpg",
+     "src": "img/law/sirae-decree-bp7-p133.jpg",
      "page": 133
     },
     {
-     "src": "img/law/sirae-decree-별표7-p134.jpg",
+     "src": "img/law/sirae-decree-bp7-p134.jpg",
      "page": 134
     },
     {
-     "src": "img/law/sirae-decree-별표7-p135.jpg",
+     "src": "img/law/sirae-decree-bp7-p135.jpg",
      "page": 135
     },
     {
-     "src": "img/law/sirae-decree-별표7-p136.jpg",
+     "src": "img/law/sirae-decree-bp7-p136.jpg",
      "page": 136
     }
    ],
@@ -1882,11 +1882,11 @@ window.CONTENT = {
    "ref": "제38조제3항 관련",
    "pages": [
     {
-     "src": "img/law/sirae-decree-별표8-p139.jpg",
+     "src": "img/law/sirae-decree-bp8-p139.jpg",
      "page": 139
     },
     {
-     "src": "img/law/sirae-decree-별표8-p140.jpg",
+     "src": "img/law/sirae-decree-bp8-p140.jpg",
      "page": 140
     }
    ],
@@ -1918,11 +1918,11 @@ window.CONTENT = {
    "ref": "제7조제1항제8호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표10-p60.jpg",
+     "src": "img/law/res-decree-bp10-p60.jpg",
      "page": 60
     },
     {
-     "src": "img/law/res-decree-별표10-p61.jpg",
+     "src": "img/law/res-decree-bp10-p61.jpg",
      "page": 61
     }
    ],
@@ -1938,31 +1938,31 @@ window.CONTENT = {
    "ref": "제7조제1항제9호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표11-p62.jpg",
+     "src": "img/law/res-decree-bp11-p62.jpg",
      "page": 62
     },
     {
-     "src": "img/law/res-decree-별표11-p63.jpg",
+     "src": "img/law/res-decree-bp11-p63.jpg",
      "page": 63
     },
     {
-     "src": "img/law/res-decree-별표11-p64.jpg",
+     "src": "img/law/res-decree-bp11-p64.jpg",
      "page": 64
     },
     {
-     "src": "img/law/res-decree-별표11-p65.jpg",
+     "src": "img/law/res-decree-bp11-p65.jpg",
      "page": 65
     },
     {
-     "src": "img/law/res-decree-별표11-p66.jpg",
+     "src": "img/law/res-decree-bp11-p66.jpg",
      "page": 66
     },
     {
-     "src": "img/law/res-decree-별표11-p67.jpg",
+     "src": "img/law/res-decree-bp11-p67.jpg",
      "page": 67
     },
     {
-     "src": "img/law/res-decree-별표11-p68.jpg",
+     "src": "img/law/res-decree-bp11-p68.jpg",
      "page": 68
     }
    ],
@@ -1983,7 +1983,7 @@ window.CONTENT = {
    "ref": "제7조제1항제1호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표3-p26.jpg",
+     "src": "img/law/res-decree-bp3-p26.jpg",
      "page": 26
     }
    ],
@@ -1998,7 +1998,7 @@ window.CONTENT = {
    "ref": "제7조제1항제1호의2 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표3의2-p27.jpg",
+     "src": "img/law/res-decree-bp3x2-p27.jpg",
      "page": 27
     }
    ],
@@ -2013,11 +2013,11 @@ window.CONTENT = {
    "ref": "제7조제1항제2호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표4-p28.jpg",
+     "src": "img/law/res-decree-bp4-p28.jpg",
      "page": 28
     },
     {
-     "src": "img/law/res-decree-별표4-p29.jpg",
+     "src": "img/law/res-decree-bp4-p29.jpg",
      "page": 29
     }
    ],
@@ -2033,7 +2033,7 @@ window.CONTENT = {
    "ref": "제7조제1항제3호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표5-p30.jpg",
+     "src": "img/law/res-decree-bp5-p30.jpg",
      "page": 30
     }
    ],
@@ -2048,7 +2048,7 @@ window.CONTENT = {
    "ref": "제7조제1항제4호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표6-p31.jpg",
+     "src": "img/law/res-decree-bp6-p31.jpg",
      "page": 31
     }
    ],
@@ -2063,43 +2063,43 @@ window.CONTENT = {
    "ref": "제7조제1항제5호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표7-p32.jpg",
+     "src": "img/law/res-decree-bp7-p32.jpg",
      "page": 32
     },
     {
-     "src": "img/law/res-decree-별표7-p33.jpg",
+     "src": "img/law/res-decree-bp7-p33.jpg",
      "page": 33
     },
     {
-     "src": "img/law/res-decree-별표7-p34.jpg",
+     "src": "img/law/res-decree-bp7-p34.jpg",
      "page": 34
     },
     {
-     "src": "img/law/res-decree-별표7-p35.jpg",
+     "src": "img/law/res-decree-bp7-p35.jpg",
      "page": 35
     },
     {
-     "src": "img/law/res-decree-별표7-p36.jpg",
+     "src": "img/law/res-decree-bp7-p36.jpg",
      "page": 36
     },
     {
-     "src": "img/law/res-decree-별표7-p37.jpg",
+     "src": "img/law/res-decree-bp7-p37.jpg",
      "page": 37
     },
     {
-     "src": "img/law/res-decree-별표7-p38.jpg",
+     "src": "img/law/res-decree-bp7-p38.jpg",
      "page": 38
     },
     {
-     "src": "img/law/res-decree-별표7-p39.jpg",
+     "src": "img/law/res-decree-bp7-p39.jpg",
      "page": 39
     },
     {
-     "src": "img/law/res-decree-별표7-p40.jpg",
+     "src": "img/law/res-decree-bp7-p40.jpg",
      "page": 40
     },
     {
-     "src": "img/law/res-decree-별표7-p41.jpg",
+     "src": "img/law/res-decree-bp7-p41.jpg",
      "page": 41
     }
    ],
@@ -2123,47 +2123,47 @@ window.CONTENT = {
    "ref": "제7조제1항제6호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표8-p42.jpg",
+     "src": "img/law/res-decree-bp8-p42.jpg",
      "page": 42
     },
     {
-     "src": "img/law/res-decree-별표8-p43.jpg",
+     "src": "img/law/res-decree-bp8-p43.jpg",
      "page": 43
     },
     {
-     "src": "img/law/res-decree-별표8-p44.jpg",
+     "src": "img/law/res-decree-bp8-p44.jpg",
      "page": 44
     },
     {
-     "src": "img/law/res-decree-별표8-p45.jpg",
+     "src": "img/law/res-decree-bp8-p45.jpg",
      "page": 45
     },
     {
-     "src": "img/law/res-decree-별표8-p46.jpg",
+     "src": "img/law/res-decree-bp8-p46.jpg",
      "page": 46
     },
     {
-     "src": "img/law/res-decree-별표8-p47.jpg",
+     "src": "img/law/res-decree-bp8-p47.jpg",
      "page": 47
     },
     {
-     "src": "img/law/res-decree-별표8-p48.jpg",
+     "src": "img/law/res-decree-bp8-p48.jpg",
      "page": 48
     },
     {
-     "src": "img/law/res-decree-별표8-p49.jpg",
+     "src": "img/law/res-decree-bp8-p49.jpg",
      "page": 49
     },
     {
-     "src": "img/law/res-decree-별표8-p50.jpg",
+     "src": "img/law/res-decree-bp8-p50.jpg",
      "page": 50
     },
     {
-     "src": "img/law/res-decree-별표8-p51.jpg",
+     "src": "img/law/res-decree-bp8-p51.jpg",
      "page": 51
     },
     {
-     "src": "img/law/res-decree-별표8-p52.jpg",
+     "src": "img/law/res-decree-bp8-p52.jpg",
      "page": 52
     }
    ],
@@ -2188,31 +2188,31 @@ window.CONTENT = {
    "ref": "제7조제1항제7호 관련",
    "pages": [
     {
-     "src": "img/law/res-decree-별표9-p53.jpg",
+     "src": "img/law/res-decree-bp9-p53.jpg",
      "page": 53
     },
     {
-     "src": "img/law/res-decree-별표9-p54.jpg",
+     "src": "img/law/res-decree-bp9-p54.jpg",
      "page": 54
     },
     {
-     "src": "img/law/res-decree-별표9-p55.jpg",
+     "src": "img/law/res-decree-bp9-p55.jpg",
      "page": 55
     },
     {
-     "src": "img/law/res-decree-별표9-p56.jpg",
+     "src": "img/law/res-decree-bp9-p56.jpg",
      "page": 56
     },
     {
-     "src": "img/law/res-decree-별표9-p57.jpg",
+     "src": "img/law/res-decree-bp9-p57.jpg",
      "page": 57
     },
     {
-     "src": "img/law/res-decree-별표9-p58.jpg",
+     "src": "img/law/res-decree-bp9-p58.jpg",
      "page": 58
     },
     {
-     "src": "img/law/res-decree-별표9-p59.jpg",
+     "src": "img/law/res-decree-bp9-p59.jpg",
      "page": 59
     }
    ],
