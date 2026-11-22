@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>매뉴얼북 관리자</title>
+<style>
+body{font-family:-apple-system,"Malgun Gothic",sans-serif;max-width:780px;margin:0 auto;padding:14px 14px 80px;background:#f4f6f9;color:#1b2430}
+h1{font-size:18px} h2{font-size:15px;margin:18px 0 6px}
+select,input[type=text],textarea,button{font:inherit;width:100%;padding:10px;margin:4px 0 10px;border:1px solid #ccd3de;border-radius:8px;background:#fff}
+textarea{min-height:90px}
+button{background:#0b3d6b;color:#fff;border:0;cursor:pointer}
+button.sub{background:#fff;color:#0b3d6b;border:1px solid #0b3d6b}
+button.del{background:#fff;color:#c0392b;border:1px solid #c0392b}
+label{font-size:13px;color:#6b7788;display:block}
+label.chkl{display:flex;gap:8px;align-items:center;color:#1b2430;margin:6px 0}
+label.chkl input{width:auto;margin:0}
+.row{display:flex;gap:8px}
+.note{font-size:13px;color:#6b7788;background:#fff;border:1px solid #e1e6ee;border-radius:8px;padding:10px;margin-bottom:12px}
+.chk{background:#fff;border:1px solid #e1e6ee;border-radius:10px;padding:10px;margin:10px 0}
+.sm{font-size:12px;color:#6b7788}
+.path{font-size:12px;color:#0b3d6b;margin:2px 0 8px}
+</style>
+</head>
+<body>
+<h1>매뉴얼북 관리자</h1>
+<div class="note">① 항목을 골라 수정 → ② 맨 아래 「content.js 내려받기」 → ③ 저장소의 content.js를 교체(업로드)하면 몇 분 안에 모든 사용자에게 반영됩니다. 이미지는 <b>img 폴더</b>에 파일을 넣고 경로를 적습니다.</div>
+
+<label>수정할 항목</label>
+<select id="sel"></select>
+<div class="path" id="path"></div>
+<div class="row"><button class="sub" id="addSib">+ 같은 단계에 추가</button><button class="sub" id="addKid">+ 하위에 추가</button></div>
+<div class="row"><button class="sub" id="up">▲ 위로</button><button class="sub" id="down">▼ 아래로</button><button class="del" id="rm">삭제</button></div>
+
+<label>제목</label><input type="text" id="title">
+<label>한 줄 설명 (목록에 표시)</label><input type="text" id="desc">
+<label>유형</label>
+<select id="type"><option value="list">목록 (하위 항목을 고르는 화면)</option><option value="inspection">점검표 (확인내용·관련법령)</option><option value="doc">문서 (자유 서술)</option></select>
+<label class="chkl"><input type="checkbox" id="soon"> 준비중으로 표시</label>
+<label>준비중 안내 문구 (선택)</label><input type="text" id="soonText">
+
+<div id="pList"><label class="chkl"><input type="checkbox" id="grid"> 하위 항목을 2열 격자로 표시</label></div>
+
+<div id="pInsp">
+  <label>소개</label><textarea id="intro"></textarea>
+  <label>이미지 (한 줄에 하나: 경로 | 설명)</label><textarea id="imgs" style="min-height:60px"></textarea>
+  <h2>승선조사 확인사항</h2>
+  <div id="checks"></div>
+  <button class="sub" id="addchk">+ 확인사항 추가</button>
+  <div class="sm">※ 표와 선박 역할 설명은 이 화면에서 수정할 수 없고, 기존 내용이 그대로 유지됩니다.</div>
+</div>
+
+<div id="pDoc">
+  <label>근거 법령</label><input type="text" id="law">
+  <label>본문 ([소제목] / - 목록 / 1. 번호목록)</label><textarea id="body" style="min-height:220px"></textarea>
+  <label>링크 (한 줄에 하나: 이름 | 주소)</label><textarea id="links" style="min-height:70px"></textarea>
+</div>
+
+<button id="dl">content.js 내려받기</button>
+<script>
+let D, cur = null, flat = [];
+const $ = (s) => document.querySelector(s);
+const today = () => new Date().toISOString().slice(0, 10);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const isLeaf = (n) => !n.children || !n.children.length;
+
+function flatten(nodes, depth, parent, out) {
+  nodes.forEach((n) => { out.push({ n, depth, parent, siblings: nodes }); if (n.children) flatten(n.children, depth + 1, n, out); });
+  return out;
+}
+const info = () => flat.find((x) => x.n === cur);
+
+async function init() {
+  await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'content.js?t=' + Date.now(); s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  D = window.CONTENT; cur = D.tree[0]; refresh();
+}
+function refresh() {
+  flat = flatten(D.tree, 0, null, []);
+  $('#sel').innerHTML = flat.map((x, i) => `<option value="${i}">${'    '.repeat(x.depth)}${x.depth ? '└ ' : ''}${esc(x.n.title)}${x.n.soon ? ' (준비중)' : ''}</option>`).join('');
+  $('#sel').value = flat.findIndex((x) => x.n === cur);
+  show();
+}
+function show() {
+  const n = cur, x = info();
+  $('#path').textContent = '위치: ' + (function p(i){ const a=[]; for (let t=i; t; t=t.parent && flat.find(f=>f.n===t.parent)) a.unshift(t.n.title); return a.join(' › '); })(x);
+  $('#title').value = n.title || ''; $('#desc').value = n.desc || '';
+  $('#type').value = n.type || (isLeaf(n) ? 'doc' : 'list');
+  $('#soon').checked = !!n.soon; $('#soonText').value = n.soonText || '';
+  $('#grid').checked = n.layout === 'grid';
+  $('#intro').value = n.intro || '';
+  $('#imgs').value = (n.images || []).map((m) => m.src + ' | ' + (m.caption || '')).join('\n');
+  $('#law').value = n.law || ''; $('#body').value = n.body || '';
+  $('#links').value = (n.links || []).map((l) => l.label + ' | ' + l.url).join('\n');
+  panels(); renderChecks();
+}
+function panels() {
+  const t = $('#type').value;
+  $('#pList').style.display = t === 'list' ? '' : 'none';
+  $('#pInsp').style.display = t === 'inspection' ? '' : 'none';
+  $('#pDoc').style.display = t === 'doc' ? '' : 'none';
+}
+function renderChecks() {
+  const cs = cur.checks || [];
+  $('#checks').innerHTML = cs.map((c, n) => `
+    <div class="chk" data-n="${n}">
+      <b>${n + 1}.</b>
+      <label>확인내용</label><textarea class="c-text" style="min-height:50px">${esc(c.text || '')}</textarea>
+      <label>세부 항목 (한 줄에 하나)</label><textarea class="c-points" style="min-height:50px">${esc((c.points || []).join('\n'))}</textarea>
+      <label>비고</label><textarea class="c-note" style="min-height:50px">${esc(c.note || '')}</textarea>
+      <label>관련법령 (한 줄에 하나: 예 수산업법 제42조제1항)</label><textarea class="c-law" style="min-height:50px">${esc(c.law || '')}</textarea>
+      ${c.table ? '<div class="sm">표 1개 포함 (유지됨)</div>' : ''}
+      <button class="del c-del">이 확인사항 삭제</button>
+    </div>`).join('');
+  document.querySelectorAll('.c-del').forEach((b) => b.onclick = () => { save(); cur.checks.splice(+b.closest('.chk').dataset.n, 1); renderChecks(); });
+}
+function save() {
+  if (!cur) return;
+  const n = cur;
+  n.title = $('#title').value;
+  const set = (k, v) => { v ? (n[k] = v) : delete n[k]; };
+  set('desc', $('#desc').value.trim()); n.type = $('#type').value;
+  set('soon', $('#soon').checked); set('soonText', $('#soonText').value.trim());
+  if (n.type === 'list') { $('#grid').checked ? (n.layout = 'grid') : delete n.layout; }
+  if (n.type === 'inspection') {
+    n.intro = $('#intro').value;
+    n.images = $('#imgs').value.split('\n').map((s) => s.trim()).filter(Boolean).map((s) => { const [a, ...b] = s.split('|'); return { src: a.trim(), caption: b.join('|').trim() }; });
+    n.checks = n.checks || [];
+    document.querySelectorAll('#checks .chk').forEach((el) => {
+      const c = n.checks[+el.dataset.n]; if (!c) return;
+      c.text = el.querySelector('.c-text').value;
+      const pts = el.querySelector('.c-points').value.split('\n').map((s) => s.trim()).filter(Boolean);
+      pts.length ? (c.points = pts) : delete c.points;
+      const nt = el.querySelector('.c-note').value.trim(); nt ? (c.note = nt) : delete c.note;
+      c.law = el.querySelector('.c-law').value;
+    });
+  }
+  if (n.type === 'doc') {
+    set('law', $('#law').value.trim()); n.body = $('#body').value;
+    n.links = $('#links').value.split('\n').map((s) => s.trim()).filter(Boolean).map((s) => { const [a, ...b] = s.split('|'); return { label: a.trim(), url: b.join('|').trim() }; });
+    n.updated = today();
+  }
+}
+const newNode = () => ({ id: 'n' + Date.now(), title: '새 항목', type: 'doc', soon: true });
+
+$('#sel').onchange = () => { save(); cur = flat[+$('#sel').value].n; refresh(); };
+$('#type').onchange = () => { panels(); };
+['title', 'desc', 'soon', 'soonText', 'type', 'grid', 'intro', 'imgs', 'law', 'body', 'links'].forEach((id) => $('#' + id).addEventListener('change', () => { save(); const k = cur; refresh(); cur = k; }));
+$('#addchk').onclick = () => { save(); (cur.checks = cur.checks || []).push({ text: '', law: '' }); renderChecks(); };
+$('#addSib').onclick = () => { save(); const x = info(), i = x.siblings.indexOf(cur), n = newNode(); x.siblings.splice(i + 1, 0, n); cur = n; refresh(); };
+$('#addKid').onclick = () => {
+  save();
+  if (cur.type !== 'list' && !isLeaf(cur)) return;
+  if (cur.type !== 'list') {
+    if (cur.type === 'inspection' && (cur.checks || []).length) { alert('내용이 있는 점검표 항목에는 하위 항목을 추가할 수 없습니다.'); return; }
+    if (cur.type === 'doc' && cur.body) { alert('본문이 있는 문서 항목에는 하위 항목을 추가할 수 없습니다.'); return; }
+    cur.type = 'list'; delete cur.soon;
+  }
+  const n = newNode(); (cur.children = cur.children || []).push(n); cur = n; refresh();
+};
+function move(d) { save(); const x = info(), i = x.siblings.indexOf(cur), j = i + d; if (j < 0 || j >= x.siblings.length) return; x.siblings.splice(i, 1); x.siblings.splice(j, 0, cur); refresh(); }
+$('#up').onclick = () => move(-1); $('#down').onclick = () => move(1);
+$('#rm').onclick = () => {
+  const x = info();
+  if (!confirm('「' + cur.title + '」' + (isLeaf(cur) ? '' : ' 및 하위 항목 전체') + '를 삭제할까요?')) return;
+  const i = x.siblings.indexOf(cur); x.siblings.splice(i, 1);
+  cur = x.siblings[i] || x.siblings[i - 1] || x.parent || D.tree[0]; if (!cur) { alert('최상위 항목이 모두 삭제되었습니다. 새로고침하세요.'); return; } refresh();
+};
+$('#dl').onclick = () => {
+  save(); D.updated = today(); D.version = (D.version || 0) + 1;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob(['window.CONTENT = ' + JSON.stringify(D, null, 2) + ';\n'], { type: 'text/javascript' }));
+  a.download = 'content.js'; a.click();
+};
+init();
+</script>
+</body>
+</html>

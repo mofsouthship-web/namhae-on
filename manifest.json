@@ -1,0 +1,14 @@
+{
+  "name": "남해온 · 남해어업관리단 디지털 업무 플랫폼",
+  "short_name": "남해온",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b3d6b",
+  "theme_color": "#0b3d6b",
+  "lang": "ko",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
