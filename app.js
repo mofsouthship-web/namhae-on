@@ -242,6 +242,7 @@ function parseLaw(line) {
 function lawLink(text, cls) {
   return String(text).split('\n').filter((x) => x.trim()).map((l) => {
     const P = parseLaw(l);
+    if (/고시/.test(l) && !P.items.length) return `<div class="lawrow"><span class="${cls}">${esc(l.trim())}</span></div>`;
     if (!P.items.length) { const u = lawUrl(P.name); return u ? `<div class="lawrow"><a class="${cls}" href="${u}" target="_blank" rel="noopener" data-law>${esc(l.trim())} <span>↗</span></a></div>` : `<div class="lawrow"><span class="${cls}">${esc(l.trim())}</span></div>`; }
     const chips = P.items.map((it, k) => {
       const lab = esc((k === 0 ? P.name + ' ' : '') + it.label);
