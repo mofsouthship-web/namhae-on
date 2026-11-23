@@ -173,6 +173,7 @@ function viewInspection(f) {
     <h3 class="sec">승선조사 확인사항</h3>
     ${checks}
     ${(f.maps || []).length ? `<h3 class="sec">조업구역·금지구역도 (법령 별표)</h3>${f.maps.map((m) => `<div class="mapref"><div class="mcap">${esc(m.caption)}</div>${m.law ? lawLink(m.law, 'lawchip') : ''}</div>`).join('')}` : ''}`;
+  $('#app').insertAdjacentHTML('beforeend', `<a class="reportbtn" href="#/board/new?ref=${encodeURIComponent(f.id)}">✎ 이 업종 내용 오류·의견 건의하기</a>`);
   scrollTo(0, 0);
 }
 
@@ -191,11 +192,13 @@ function viewDoc(n) {
   scrollTo(0, 0);
 }
 
+window.MAP_GET = (id) => MAP[id];
 function setTab(t) { document.querySelectorAll('#tabbar a').forEach((a) => a.classList.toggle('on', a.dataset.tab === t)); }
 function route() {
   if (!DATA || !DATA.tree) return;
   document.body.classList.remove('home');
   if (location.hash === '#/search') { setTab('search'); viewSearch(); return; }
+  if (location.hash.startsWith('#/board')) { setTab('board'); window.viewBoard && window.viewBoard(); return; }
   if (location.hash === '#/fav') { setTab('fav'); viewFav(); scrollTo(0, 0); return; }
   setTab('home');
   const m = location.hash.match(/^#\/n\/(.+)$/);

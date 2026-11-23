@@ -1,6 +1,6 @@
 // 서비스워커: 앱 파일은 저장본 우선(빠름·오프라인), content.js은 네트워크 우선(최신 반영)
-const V = 'manual-v16';
-const SHELL = ['./', 'index.html', 'app.js', 'style.css', 'manifest.json', 'content.js', 'icon-192.png', 'img/geonhyeonmang-model.jpg', 'img/hero-banner.jpg', 'img/card-enforce.jpg', 'img/card-admin.jpg'];
+const V = 'manual-v17';
+const SHELL = ['./', 'index.html', 'app.js', 'board.js', 'board-config.js', 'style.css', 'manifest.json', 'content.js', 'icon-192.png', 'img/geonhyeonmang-model.jpg', 'img/hero-banner.jpg', 'img/card-enforce.jpg', 'img/card-admin.jpg'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(V).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
