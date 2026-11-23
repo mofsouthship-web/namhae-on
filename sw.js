@@ -1,5 +1,5 @@
 // 서비스워커: 앱 파일은 저장본 우선(빠름·오프라인), content.js은 네트워크 우선(최신 반영)
-const V = 'manual-v17';
+const V = 'manual-v19';
 const SHELL = ['./', 'index.html', 'app.js', 'board.js', 'board-config.js', 'style.css', 'manifest.json', 'content.js', 'icon-192.png', 'img/geonhyeonmang-model.jpg', 'img/hero-banner.jpg', 'img/card-enforce.jpg', 'img/card-admin.jpg'];
 
 self.addEventListener('install', (e) => {
@@ -17,6 +17,12 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
+
+  if (url.pathname.endsWith('board-config.js')) {
+    // 설정 파일은 항상 최신본 우선 (실패 시 저장본)
+    e.respondWith(fetch(req, { cache: 'no-store' }).then((r) => { const cp = r.clone(); caches.open(V).then((c) => c.put('board-config.js', cp)); return r; }).catch(() => caches.match('board-config.js').then((m) => m || Response.error())));
+    return;
+  }
 
   if (url.pathname.endsWith('content.js')) {
     // 느린 회선 대비: 5초 안에 못 받으면 저장본 사용

@@ -182,3 +182,4 @@ figure .lawrow{padding:6px 10px 8px}
 .bref{font-size:13px;background:#eef3f9;border-radius:8px;padding:8px 10px}
 .bsubmit{background:var(--pri);color:#fff;border:0;border-radius:12px;padding:13px 28px;font-weight:700;font-size:15px;margin-top:8px}
 .bsubmit:disabled{opacity:.5}.bcancel{margin-left:12px;color:#678;font-size:14px}
+.bmine{display:flex;gap:14px;padding:0 0 12px;font-size:13px}.bmine a,.bmine button{color:#678;background:none;border:0;padding:0;text-decoration:underline;font:inherit}.bmine button{color:#b3261e}
