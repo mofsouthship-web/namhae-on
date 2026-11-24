@@ -52,7 +52,7 @@
             <small>${esc(x.cat)} · ${esc(x.author)} · ${esc(String(x.at).slice(0, 10))}${x.ref ? ' · ' + esc(x.ref) : ''}</small></summary>
           <div class="bbody">${esc(x.body).replace(/\n/g, '<br>')}</div>
           ${mineOf(x.id) ? `<div class="bmine"><a href="#/board/edit/${x.id}">수정</a><button data-b="del" data-v="${x.id}">삭제</button></div>` : ''}
-          ${x.reply ? `<div class="breply"><b>관리자 답변</b> <small>${esc(String(x.replyAt).slice(0, 10))}</small><br>${esc(x.reply).replace(/\n/g, '<br>')}</div>` : ''}
+          ${(x.reply || x.file) ? `<div class="breply"><b>관리자 답변</b> <small>${esc(String(x.replyAt).slice(0, 10))}</small><br>${esc(x.reply || '').replace(/\n/g, '<br>')}${x.file && /^https:\/\/(drive|docs)\.google\.com\//.test(x.file) ? `<a class="bfile" href="${esc(x.file)}" target="_blank" rel="noopener">📎 답변 파일 보기${x.fileName ? ' · ' + esc(x.fileName) : ''}</a>` : ''}</div>` : ''}
         </details>`).join('') || (state.items ? '<div class="empty">아직 글이 없습니다.</div>' : '')}`;
   }
   function formHTML(ref, ed) {

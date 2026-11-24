@@ -183,3 +183,4 @@ figure .lawrow{padding:6px 10px 8px}
 .bsubmit{background:var(--pri);color:#fff;border:0;border-radius:12px;padding:13px 28px;font-weight:700;font-size:15px;margin-top:8px}
 .bsubmit:disabled{opacity:.5}.bcancel{margin-left:12px;color:#678;font-size:14px}
 .bmine{display:flex;gap:14px;padding:0 0 12px;font-size:13px}.bmine a,.bmine button{color:#678;background:none;border:0;padding:0;text-decoration:underline;font:inherit}.bmine button{color:#b3261e}
+.bfile{display:block;margin-top:8px;padding:9px 10px;background:#fff;border:1px solid #b9d3ee;border-radius:8px;color:var(--pri);font-weight:700;font-size:13px;text-decoration:none;word-break:break-all}
